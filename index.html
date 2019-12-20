@@ -17,13 +17,43 @@
 <script>
     var canvas = document.getElementById('canvas');
     var context = canvas.getContext('2d');
-    var cx = canvas.width = 400;
-    var cy = canvas.height = 400;
+    var cx = canvas.width = 800;
+    var cy = canvas.height = 800;
 
+    var grd = context.createLinearGradient(100, 100, 200, 200);
+    grd.addColorStop(0, 'pink');
+    grd.addColorStop(1, 'white');
+
+    // 绘制一个圆
+    context.beginPath();  // 起始一条路径，或重置当前路径
+    context.arc(150, 150, 30, 0, Math.PI * 2, true); // 创建弧/曲线
+    context.closePath(); // 创建从当前点回到起始点的路径
+    context.fillStyle = grd; // 设置或返回用于填充绘画的颜色、渐变或模式
+    context.shadowBlur = 20;
+    context.shadowColor = 'white';
+    context.fill();  // 填充当前绘图（路径）
+
+    // 顺时针绘制 1/4 的圆
     context.beginPath();
-    context.arc(100, 100, 50, 0, Math.PI * 2, true);
-    context.closePath();
-    context.fillStyle = 'rgb(255, 255, 255)';
-    context.fill();
+    context.arc(200, 200, 50, 0, Math.PI * 0.5, false);
+    context.strokeStyle = 'white';
+    context.stroke();
+
+    // 绘制一条直线
+    context.beginPath();
+    context.moveTo(50, 50); // 把路径移动到画布中的指定点，不创建线条
+    context.lineTo(80, 80); // 添加一个新点，然后在画布中创建从该点到最后指定点的线条
+    context.lineWidth = 10;
+    context.lineCap = 'round';
+    context.strokeStyle = 'white';
+    context.stroke();
+
+    // 绘制一个矩形
+    context.beginPath();
+    context.fillStyle = 'white';
+    context.rotate(20 * Math.PI/180);
+    context.fillRect(400, 400, 100, 100);
+    context.strokeStyle = 'white';
+    context.strokeRect(600, 600, 100, 100);
 </script>
 </html>
