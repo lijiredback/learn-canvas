@@ -1,6 +1,10 @@
 # learn-canvas
 learn canvas, just some demo
 
+### 目录
++ index.html -- canvas 基础
++ particle.html -- 实现随机粒子
+
 ### 创建画布
 
 用 HTML 或 JS 设置画布宽高，不要用 CSS，因为会缩放
