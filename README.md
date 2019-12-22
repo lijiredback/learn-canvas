@@ -118,4 +118,23 @@ context.arc(x, y, r, sAngle, eAngle, counterclockwise);
 | transform() | 替换绘图的当前转换矩阵 |
 | setTransform() | 将当前转换重置为单位矩阵，然后运行 transform() | 
 
+### 动效
 
+其实就是重绘的过程，当某种位置关系变化发生的足够快时，就产生了动画
+
+清除：
+
+```
+context.clearRect(x, y, width, height);
+```
+
++ x: 要清除的矩形左上角的 x 坐标
++ y: 要清除的矩形左上角的 y 坐标
++ width：要清除的矩形的宽度，以像素计
++ height：要清除的矩形的高度，以像素计
+
+```
+requestAnimationFrame() 函数
+```
+
+>  ```window.requestAnimationFrame()``` 方法告诉浏览器，你希望执行动画，并请求浏览器调用指定的函数在下一次重绘之前更新动画。该方法使用一个回调函数作为参数，这个回调函数会在浏览器重绘之前调用
