@@ -2,6 +2,28 @@
 learn canvas, just some demo
 
 ### 目录
++ canvas-step-by-step
+    - 01 基础
+        - 放置画布
+        - 获取画布
+        - 获取画笔
+    - 02 画一条线
+        - 确定起点: moveTo(x, y)
+        - 确定终点: lineTo(x, y)
+        - 选择画笔
+            - 颜色: strokeStyle
+            - 粗细: lineWidth
+        - 开始画画
+            - fill(): 填充
+            - stroke(): 描边
+    - 03 多条线
+        - beginPath(): 绘制设置状态的起点
+        - 结束于: fill()、stroke()、closePath()
+    - 04 矩形
+        - closePath(): 绘制封闭图形，不使用可能导致缺口；不封闭的图形不要用，会自动绘制最后一笔
+        - fillStyle: 设置填充颜色（油漆桶）
+        - fill(): 填充
+        - **注意：状态与绘制分离**
 + index.html -- canvas 基础
 + particle.html -- 实现随机粒子
 

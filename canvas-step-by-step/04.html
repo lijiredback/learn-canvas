@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #canvas {
+      border: 1px solid #AAA;
+      display: block;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- 来一个画布，放好 -->
+  <canvas id="canvas"></canvas>
+
+</body>
+<script>
+  // 获取画布
+  const canvas = document.getElementById('canvas')
+  canvas.width = 800
+  canvas.height = 600
+
+  // 获取画笔
+  const context = canvas.getContext('2d')
+
+  context.beginPath()
+  // 选择起点
+  context.moveTo(100, 100)
+  // 选择终点
+  context.lineTo(400, 100)
+  context.lineTo(400, 400)
+  context.lineTo(100, 400)
+  context.lineTo(100, 100)
+  // context.closePath()
+  // 选择画笔
+  context.lineWidth = 2
+  context.strokeStyle = 'black'
+  context.fillStyle = 'red' // 油漆桶
+  // 绘制
+  context.stroke()
+  context.fill()
+
+</script>
+</html>

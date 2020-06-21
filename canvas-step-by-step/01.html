@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #canvas {
+      width: 800px;
+      height: 600px;
+      border: 1px solid #aaa;
+      display: block;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- 来一个画布，放好 -->
+  <canvas id="canvas"></canvas>
+
+</body>
+<script>
+  // 获取画布
+  const canvas = document.getElementById('canvas')
+
+  // 获取画笔
+  const context = canvas.getContext('2d')
+</script>
+</html>
