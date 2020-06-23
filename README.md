@@ -24,6 +24,7 @@ learn canvas, just some demo
         - fillStyle: 设置填充颜色（油漆桶）
         - fill(): 填充
         - **注意：状态与绘制分离**
+    - 05 封装
 + index.html -- canvas 基础
 + particle.html -- 实现随机粒子
 
