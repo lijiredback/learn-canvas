@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #canvas {
+      border: 1px solid #AAA;
+      display: block;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- 来一个画布，放好 -->
+  <canvas id="canvas"></canvas>
+
+</body>
+<script>
+  // 获取画布
+  const canvas = document.getElementById('canvas')
+  canvas.width = 800
+  canvas.height = 600
+
+  // 获取画笔
+  const context = canvas.getContext('2d')
+
+  // 选择画笔
+  context.lineWidth = 50
+  context.strokeStyle = '#1BAAAA'
+
+  context.beginPath()
+  // 选择起点
+  context.moveTo(100, 100)
+  // 选择终点
+  context.lineTo(700, 100)
+  context.lineCap = "butt"
+  context.stroke()
+
+  context.beginPath();
+  context.moveTo(100,300);
+  context.lineTo(700,300);
+  context.lineCap = "round";
+  context.stroke();
+
+  context.beginPath();
+  context.moveTo(100,500);
+  context.lineTo(700,500);
+  context.lineCap = "square";
+  context.stroke();
+  //下面画两个基准线方便观察
+  context.lineWidth = 3;
+  context.strokeStyle = "black";
+
+  context.beginPath();
+  context.moveTo(100,0);
+  context.lineTo(100,600);
+  context.moveTo(700,0);
+  context.lineTo(700,600);
+  context.stroke();
+
+</script>
+</html>

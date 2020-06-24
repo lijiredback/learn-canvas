@@ -25,6 +25,17 @@ learn canvas, just some demo
         - fill(): 填充
         - **注意：状态与绘制分离**
     - 05 封装
+    - 06 线条属性
+        - lineCap: 上下文中线的端点
+            - butt: 默认值，端点是垂直于线段边缘的平直边缘
+            - round: 端点是在线段边缘处以线宽为直径的半圆
+            - square: 端点是在选段边缘处以线宽为长、以一半线宽为宽的矩形
+        - lineJoin: 定义两条线相交产生的拐角，可将其称为连接。在连接处创建一个填充三角形，可以使用 lineJoin 设置它的基本属性
+            - miter: 默认值，在连接处边缘延长相接。miterLimit 是角长和线宽所允许的最大比例(默认是 10)
+            - bevel: 连接处是一个对角线斜角
+            - round: 连接处是一个圆
+        - lineWidth: 线宽（默认值为 1.0）
+        - strokeStyle: 笔触样式
 + index.html -- canvas 基础
 + particle.html -- 实现随机粒子
 
