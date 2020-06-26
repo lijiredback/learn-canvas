@@ -37,6 +37,16 @@ learn canvas, just some demo
             - round: 连接处是一个圆
         - lineWidth: 线宽（默认值为 1.0）
         - strokeStyle: 笔触样式
+    - 10 填充颜色
+        - 基本颜色
+            - fillStyle，strokeStyle 属性，用来设置画布上形状的基本颜色和填充
+        - 渐变颜色
+            - 线性渐变: 创建一个水平、垂直、对角线的填充图案
+            - 径向渐变: 自中心点创建一个放射状填充
+            - 填充渐变形状的三个步骤：
+                - 添加渐变线
+                - 为渐变线添加关键颜色
+                - 应用渐变
 + index.html -- canvas 基础
 + particle.html -- 实现随机粒子
 
